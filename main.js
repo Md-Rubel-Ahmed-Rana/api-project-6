@@ -1,6 +1,7 @@
 
 // loading all the players
 const loadPlayers = async(search) => {
+    // added dynamic url to get players by searching
     const url = await `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${search}`;
     const res = await fetch(url);
     const palayersData = await res.json();
@@ -38,10 +39,10 @@ const searchPlayer = () => {
 // adding Event Listener to get players pressing Enter Key instead Search Button
 document.getElementById("search-field").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        const searchField = document.getElementById("search-field");
-        const searchText = searchField.value;
-        loadPlayers(searchText);
+        searchPlayer()
     }
 })
 
+
+// By default show some players
 loadPlayers("");
