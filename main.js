@@ -17,10 +17,10 @@ const showPlayer = (players) => {
         playerDiv.classList.add("player")
         playerDiv.innerHTML = `
             <img src= ${player.strThumb ? player.strThumb : player.strFanart1} />
-            <h1>Player ID: ${player.idPlayer}</h1>
-            <h2>Name: ${player.strPlayer} </h2>
-            <h3>Country: ${player.strNationality}</h3>
-            <h3>Position: ${player.strPosition}</h3>
+            <h4>Player ID: ${player.idPlayer}</h4>
+            <h2 class="text-white">Name: ${player.strPlayer} </h2>
+            <h4>Position: ${player.strPosition}</h4>
+            <h4>Country: ${player.strNationality}</h4>
         `;
         playerContainer.appendChild(playerDiv)
         
